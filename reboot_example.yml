@@ -18,7 +18,7 @@
           apt:
             update_cache: yes
             upgrade: dist
-          when: ansible_os_family == 'Debian'
+          when: ansible_os_family == 'Ubuntu'
 
         - name: Reboot the server
           reboot:
@@ -34,4 +34,4 @@
           debug:
             var: uptime_result.stdout
 
-      when: ansible_os_family == 'Debian'  # Adjust this condition as needed for your environment
+      when: ansible_os_family == 'Ubuntu'  # Adjust this condition as needed for your environment
